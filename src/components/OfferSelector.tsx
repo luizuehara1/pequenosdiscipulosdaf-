@@ -17,7 +17,7 @@ export default function OfferSelector({ onSelectOption }: OfferSelectorProps) {
   // Run once initially to broadcast default selection
   useEffect(() => {
     const selectedPrice = selectedOffer === 'base' ? 14.90 : 19.90;
-    const selectedUrl = selectedOffer === 'base' ? '[COLOCAR_LINK_CHECKOUT_1490]' : '[COLOCAR_LINK_CHECKOUT_1990]';
+    const selectedUrl = 'https://pay.cakto.com.br/acnvaef_923318';
     onSelectOption(selectedPrice, selectedUrl);
   }, [selectedOffer, onSelectOption]);
 
@@ -61,7 +61,7 @@ export default function OfferSelector({ onSelectOption }: OfferSelectorProps) {
   const handleSelect = (option: 'base' | 'upsell') => {
     setSelectedOffer(option);
     const selectedPrice = option === 'base' ? 14.90 : 19.90;
-    const selectedUrl = option === 'base' ? '[COLOCAR_LINK_CHECKOUT_1490]' : '[COLOCAR_LINK_CHECKOUT_1990]';
+    const selectedUrl = 'https://pay.cakto.com.br/acnvaef_923318';
     onSelectOption(selectedPrice, selectedUrl);
   };
 
@@ -224,18 +224,10 @@ export default function OfferSelector({ onSelectOption }: OfferSelectorProps) {
           }`}
           id="offer-card-upsell"
         >
-          {/* HIGHLY EXCITING BADGES AS REQUESTED (🔥 MAIS ESCOLHIDO, ⭐ MELHOR CUSTO-BENEFÍCIO, etc.) */}
-          <div className="absolute -top-4.5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-red-600 via-amber-500 to-yellow-500 text-white font-display text-[9px] sm:text-[10px] font-black px-4 py-2 rounded-full flex flex-wrap items-center justify-center gap-1 sm:gap-2 shadow-md uppercase tracking-wider z-20 whitespace-nowrap">
-            <Sparkles className="w-3.5 h-3.5 fill-white animate-pulse" />
-            <span>🔥 MAIS ESCOLHIDO</span>
-            <span className="opacity-40">•</span>
-            <span>⭐ MELHOR CUSTO-BENEFÍCIO</span>
-            <span className="opacity-40">•</span>
-            <span>🚀 +464 PÁG. EXTRAS</span>
-            <span className="opacity-40">•</span>
-            <span>📚 584 PÁG. TOTAL</span>
-            <span className="opacity-40">•</span>
-            <span>🎁 APENAS +R$ 5,00</span>
+          {/* Small, elegant Mais Escolhido tag on absolute position floating on border */}
+          <div className="absolute -top-3 right-6 bg-amber-500 text-white font-display text-[10px] sm:text-xs font-black px-3.5 py-1 rounded-full shadow-md uppercase tracking-wider z-10 flex items-center gap-1">
+            <Sparkles className="w-3 h-3 fill-white animate-pulse" />
+            <span>Mais escolhido</span>
           </div>
 
           <div>
@@ -486,7 +478,7 @@ export default function OfferSelector({ onSelectOption }: OfferSelectorProps) {
       <div className="max-w-2xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8 text-center text-[10px] sm:text-[11px] font-bold text-gray-600">
         <div className="bg-white/80 p-3 rounded-xl border border-brand-beige-200 flex items-center justify-center gap-1.5 shadow-sm">
           <ShieldCheck className="w-4 h-4 text-emerald-500" />
-          <span>Compra segura Kiwify</span>
+          <span>Compra segura</span>
         </div>
         <div className="bg-white/80 p-3 rounded-xl border border-brand-beige-200 flex items-center justify-center gap-1.5 shadow-sm">
           <Clock className="w-4 h-4 text-brand-blue-500" />
@@ -507,12 +499,12 @@ export default function OfferSelector({ onSelectOption }: OfferSelectorProps) {
           Oferta Selecionada: <span className="text-gray-900 font-extrabold">{selectedOffer === 'base' ? 'Volume 1 — R$ 14,90' : 'Kit Completo + Volume 2 — R$ 19,90'}</span>
         </p>
         <a
-          href={selectedOffer === 'base' ? '[COLOCAR_LINK_CHECKOUT_1490]' : '[COLOCAR_LINK_CHECKOUT_1990]'}
+          href="https://pay.cakto.com.br/acnvaef_923318"
           id="cta-offer-button"
           className="inline-flex w-full items-center justify-center gap-3 bg-brand-green-500 hover:bg-brand-green-600 text-white font-display text-lg sm:text-xl font-black py-4.5 sm:py-5 px-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 active:scale-95 btn-premium-shine btn-auto-shimmer shadow-premium-hover cursor-pointer"
         >
           <span>
-            {selectedOffer === 'base' ? 'Quero o Volume 1' : 'Quero o Kit Completo'}
+            {selectedOffer === 'base' ? 'Quero receber meu PDF' : 'Comprar agora por R$ 19,90'}
           </span>
           <ArrowRight className="w-5.5 h-5.5 stroke-[2.5]" />
         </a>

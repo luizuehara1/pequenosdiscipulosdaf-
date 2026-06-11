@@ -44,7 +44,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function App() {
   // Offer selection state from our detailed element
   const [activePrice, setActivePrice] = useState<number>(19.90);
-  const [activeCheckoutUrl, setActiveCheckoutUrl] = useState<string>('[COLOCAR_LINK_CHECKOUT_1990]');
+  const [activeCheckoutUrl, setActiveCheckoutUrl] = useState<string>('https://pay.cakto.com.br/acnvaef_923318');
 
   // Modal states for footer links to maintain professional structure and clear user expectations
   const [modalType, setModalType] = useState<'privacy' | 'terms' | 'support' | null>(null);
@@ -269,7 +269,7 @@ export default function App() {
                   onClick={scrollToOffers}
                   className="w-full sm:w-auto text-center bg-brand-green-500 hover:bg-brand-green-600 text-white font-display text-lg font-bold py-4.5 px-10 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 btn-premium-shine btn-auto-shimmer shadow-premium-hover"
                 >
-                  Quero receber o PDF agora
+                  Receber acesso imediato
                 </a>
               </div>
             </div>
@@ -608,7 +608,7 @@ export default function App() {
 
             <div className="md:col-span-8">
               <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">
-                <strong>Compra totalmente segura pela Kiwify.</strong> Após a aprovação do pagamento, você recebe imediatamente o link de acesso ao material digital para baixar e imprimir em casa sem qualquer complicação. Caso tenha dúvidas, nosso suporte amigável estará ativo todos os dias.
+                <strong>Pagamento seguro e acesso imediato ao material em PDF após a confirmação da compra.</strong> Você receberá o link de acesso ao material digital para baixar e imprimir em casa sem qualquer complicação. Caso tenha dúvidas, nosso suporte amigável estará ativo todos os dias.
               </p>
 
               {/* Badges container */}
@@ -673,8 +673,8 @@ export default function App() {
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-white font-extrabold mb-5 leading-tight">
             Transforme o tempo livre do seu filho em um momento com Deus
           </h2>
-          <p className="text-brand-blue-100 text-base sm:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
-            Comece hoje com atividades simples, educativas, divertidas e carregadas de fé. Reduza o vício das telas e deixe o Espírito Santo tocar o coração do seu filho através do aprendizado bíblico infantil.
+          <p className="text-brand-blue-100 text-base sm:text-lg mb-8 max-w-2xl mx-auto leading-relaxed font-semibold">
+            Clique no botão abaixo e receba seu material completo em PDF.
           </p>
 
           <a
@@ -682,7 +682,7 @@ export default function App() {
             onClick={scrollToOffers}
             className="inline-flex items-center gap-2 bg-brand-yellow-400 hover:bg-brand-yellow-500 text-gray-900 font-display text-lg font-bold py-4.5 px-10 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5 btn-premium-shine btn-auto-shimmer shadow-premium-hover duration-300 active:scale-95"
           >
-            Quero o PDF agora
+            Quero receber meu PDF
           </a>
 
           <p className="mt-4 text-xs text-brand-blue-200 uppercase font-bold tracking-wider">
@@ -730,7 +730,7 @@ export default function App() {
 
           <div className="text-[10px] text-gray-600 border-t border-gray-900 pt-6">
             <p>© {new Date().getFullYear()} Pequenos Discípulos da Fé. Todos os direitos reservados.</p>
-            <p className="mt-1">Kiwify é uma intermediadora de pagamentos segura. Nosso conteúdo não substitui a bíblia física ou o aconselhamento doutrinário da igreja local.</p>
+            <p className="mt-1">Nossa plataforma utiliza uma intermediadora de pagamentos totalmente segura. Nosso conteúdo não substitui a bíblia física ou o aconselhamento doutrinário da igreja local.</p>
           </div>
 
         </div>
@@ -748,7 +748,7 @@ export default function App() {
           href={activeCheckoutUrl}
           className="bg-brand-green-500 hover:bg-brand-green-600 text-white font-display text-xs sm:text-sm font-bold py-3.5 px-6 rounded-xl flex items-center gap-1.5 shadow-md active:scale-95 transition-all mobile-cta-pulse btn-premium-shine btn-auto-shimmer"
         >
-          <span>COMPRAR AGORA</span>
+          <span>RECEBER ACESSO IMEDIATO</span>
           <ArrowRight className="w-4 h-4" />
         </a>
       </div>
@@ -775,7 +775,7 @@ export default function App() {
                   <h3 className="font-display text-xl font-bold text-gray-900 mb-4">Política de Privacidade</h3>
                   <div className="text-xs sm:text-sm text-gray-600 space-y-3 leading-relaxed">
                     <p>Valorizamos a privacidade e segurança de todas as famílias e educadores cristãos que utilizam nosso portal de recursos educativos.</p>
-                    <p><strong>1. Dados coletados:</strong> Ao adquirir nossos materiais através da Kiwify, os dados cadastrais (nome completo e e-mail) nos são retransmitidos para permitir a entrega automática e identificação do suporte de download.</p>
+                    <p><strong>1. Dados coletados:</strong> Ao adquirir nossos materiais através da plataforma de pagamento seguro, os dados cadastrais (nome completo e e-mail) nos são retransmitidos para permitir a entrega automática e identificação do suporte de download.</p>
                     <p><strong>2. Sem Span:</strong> Não vendemos, alugamos ou retransmitimos sua conta de e-mail para outras marcas. Você apenas receberá atualizações das atividades de colorir ou materiais complementares solicitados por você.</p>
                     <p><strong>3. Cookies:</strong> Usamos pequenos cookies para viabilizar as métricas padrão de performance do site e rastreamento do fluxo geral de compras.</p>
                   </div>
