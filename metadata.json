@@ -1,0 +1,6 @@
+{
+  "name": "Pequenos Discípulos da Fé",
+  "description": "Página de vendas de alta conversão para o kit digital de Atividades Bíblicas Infantis - Pequenos Discípulos da Fé.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
